@@ -2,16 +2,17 @@ name: Run tests on any Push event
 on:
   push:
     tags:
-      - '!refs/tags/*'
+      - "!refs/tags/*"
     branches:
-      - '*'
+      - "*"
 jobs:
   run_tests:
     runs-on: [ubuntu-latest]
-#    container:
-#      image: docker://repo:tag
-#      env:
-#        T1: t1
+    #    container:
+    #      image: docker://repo:tag
+    #      env:
+    #        T1: t1
+    #
 
     strategy:
       matrix:
@@ -38,6 +39,6 @@ jobs:
         id: hello
         uses: ozada/test-action@v1
         with:
-          who-to-greet: 'Joe Dow'
+          who-to-greet: "Joe Dow"
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
