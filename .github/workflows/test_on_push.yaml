@@ -12,7 +12,6 @@ jobs:
     #      image: docker://repo:tag
     #      env:
     #        T1: t1
-    #
 
     strategy:
       matrix:
