@@ -14,9 +14,8 @@ jobs:
     #        T1: t1
     #
 
-    strategy:
-      matrix:
-        python-version: [3.10]
+    with:
+      python-version: "3.8"
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
